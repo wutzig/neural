@@ -111,15 +111,15 @@ for j in range(len(test_images)):
 print(str(hits / len(test_images)))
 print(numbers)
 
-#np.set_printoptions(formatter={"all": lambda x: "%.3f" % x})
-#
-#for j in range(len(myNet.weights)):
-#    myNet.weights[j] = np.round(myNet.weights[j], 3)
-#    myNet.biases[j] = np.round(myNet.biases[j], 3)
-#
-#file_handle = open("weights.txt", "w")
-#file_handle.write("w0 = " + str(myNet.weights[0].tolist()) + "\n")
-#file_handle.write("w1 = " + str(myNet.weights[1].tolist()) + "\n")
-#file_handle.write("b0 = " + str(myNet.biases[0].tolist()) + "\n")
-#file_handle.write("b1 = " + str(myNet.biases[1].tolist()) + "\n")
-#file_handle.close()
+np.set_printoptions(formatter={"all": lambda x: "%.3f" % x})
+
+for j in range(len(myNet.weights)):
+   myNet.weights[j] = np.round(myNet.weights[j], 3)
+   myNet.biases[j] = np.round(myNet.biases[j], 3)
+
+file_handle = open("weights.txt", "w")
+file_handle.write("w0 = " + str(myNet.weights[0].tolist()) + "\n")
+file_handle.write("w1 = " + str(myNet.weights[1].tolist()) + "\n")
+file_handle.write("b0 = " + str(myNet.biases[0].tolist()) + "\n")
+file_handle.write("b1 = " + str(myNet.biases[1].tolist()) + "\n")
+file_handle.close()
